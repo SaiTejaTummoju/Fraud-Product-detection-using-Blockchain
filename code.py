@@ -13,16 +13,16 @@ import logging
 
 # Flask app setup
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "my_secret_key"
-app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SECRET_KEY'] = "YOUR_KEY"
+app.config['SESSION_TYPE'] = '___'
 
 # MongoDB setup
-mongo_client = MongoClient("mongodb://localhost:27017/")
+mongo_client = MongoClient("YOUR HOST")
 mongo_db = mongo_client["productDB"]
 mongo_collection = mongo_db["products"]
 
 # IPFS setup
-ipfs_api_url = "http://127.0.0.1:5001/api/v0/"
+ipfs_api_url = "IPFS_DAEMON_SERVER"
 #use this for retriving from webui
 #http://127.0.0.1:8080/ipfs/<CID>
 # Blockchain setup
@@ -36,7 +36,7 @@ ENCRYPTION_KEY_FILE = 'encryption_key.key'
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
-Tokenizer_path="/Users/saiteja/Desktop/miniproject/tokenizer2.pkl";
+Tokenizer_path="/path_TO/tokenizer2.pkl";
 with open(Tokenizer_path,'rb') as file:
     tokenizer=pickle.load(file)
 # Load the model once during application startup
