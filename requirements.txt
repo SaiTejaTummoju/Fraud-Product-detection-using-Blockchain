@@ -1,0 +1,9 @@
+Flask==2.2.3
+Flask-Cors==3.0.10
+cryptography==41.0.3
+ipfshttpclient==0.8.0a2
+pymongo==4.5.0
+tensorflow==2.13.0
+numpy==1.25.0
+opencv-python==4.8.0.74
+pandas==1.5.3
